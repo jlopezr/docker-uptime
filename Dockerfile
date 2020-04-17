@@ -3,14 +3,14 @@
 #
 # VERSION 0.1.0
 
-FROM ubuntu
+FROM ubuntu:trusty
 MAINTAINER Eugene Kalinin <e.v.kalinin@gmail.com>
 
 RUN apt-get update
 
 # node.js
 RUN apt-get install -y curl make
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 
 # latest mongodb
